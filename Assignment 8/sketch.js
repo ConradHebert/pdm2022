@@ -36,7 +36,13 @@ function setup() {
   }, "4n").start(0);
   const loop2 = new Tone.Loop(time => {
     synth.triggerAttackRelease("D3", "8n", time + .25);
-  }, "4n").start(0); //the background music for the game
+  }, "4n").start(10);
+  const loop3 = new Tone.Loop(time => {
+    synth.triggerAttackRelease("E3", "8n", time + .3);
+  }, "4n").start(20);
+  const loop4 = new Tone.Loop(time => {
+    synth.triggerAttackRelease("F3", "8n", time + .35);
+  }, "4n").start(25); //the game time progressing adds more notes to the background music 
 }
 
 function draw() {
